@@ -232,7 +232,7 @@ public final class GamePlay extends JFrame implements LoopSteps {
      */
     private Vector2D takeNextLegalMove() {
         while (!moves.isEmpty()) {
-            Vector2D m = (!moves.isEmpty() ? moves.remove(0) : move);
+            Vector2D m = moves.remove(0);
             if (validateMove(m, move)) {
                 return m;
             }
